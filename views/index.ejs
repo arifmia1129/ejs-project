@@ -23,10 +23,13 @@
             <button type="submit">Add</button>
         </form>
         <ul>
-            <li>C Programming</li>
-            <li>
-                <%= plNames %>
-            </li>
+            <%if(plNames.length) { %>
+                <li>
+                    <%= plNames %>
+                </li>
+                <% } else { %>
+                    <p>Existing data not found</p>
+                    <% } %>
         </ul>
     </main>
     <footer></footer>
