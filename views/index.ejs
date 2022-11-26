@@ -23,13 +23,15 @@
             <button type="submit">Add</button>
         </form>
         <ul>
-            <%if(plNames.length) { %>
-                <li>
-                    <%= plNames %>
-                </li>
-                <% } else { %>
-                    <p>Existing data not found</p>
-                    <% } %>
+            <%if (plNames.length) {%>
+                <%for (const plName of plNames) {%>
+                    <li>
+                        <%=plName%>
+                    </li>
+                    <%}%>
+                        <%} else {%>
+                            <p>Existing data not found</p>
+                            <%}%>
         </ul>
     </main>
     <footer></footer>
